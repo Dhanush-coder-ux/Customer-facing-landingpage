@@ -1,0 +1,4 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+html { scroll-behavior: smooth; }
+body { @apply bg-[#FCFCF8] font-sans text-ink antialiased; }
+@media (max-width: 767px), (prefers-reduced-motion: reduce) { .animate-float { animation: none; } }
