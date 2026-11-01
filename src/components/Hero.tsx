@@ -19,7 +19,7 @@ export default function Hero() {
           <p className="mt-3 text-sm text-ink/60">Available on Android</p>
         </motion.div>
         <motion.div className="relative" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.15 }}>
-          <PhoneMockup />
+          <PhoneMockup label="Home Feed" tag="Store Preview" />
           <div className={`${chip} -left-2 top-12`}><Sparkles size={14} className="text-primary" />New arrivals</div>
           <div className={`${chip} -right-2 top-32`}><TrendingUp size={14} className="text-primary" />Popular products</div>
           <div className={`${chip} bottom-24 -left-4`}><ShoppingCart size={14} className="text-primary" />3 in cart</div>

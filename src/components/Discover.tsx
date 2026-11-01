@@ -1,12 +1,12 @@
 import { Check, Headphones, Watch, Shirt, Footprints, Camera, Backpack } from "lucide-react";
 import Reveal from "./Reveal";
 const tiles = [Headphones, Watch, Shirt, Footprints, Camera, Backpack];
-const bg = ["bg-blue-100", "bg-outline", "bg-sky-100", "bg-indigo-100", "bg-blue-50", "bg-page/50"];
+const bg = ["bg-orange-100", "bg-orange-50", "bg-amber-100", "bg-orange-100/70", "bg-milk-warm", "bg-orange-50"];
 export default function Discover() {
   return (
     <section className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 md:grid-cols-2">
       <div className="grid grid-cols-3 gap-3">
-        {tiles.map((I, k) => <div key={k} className={`flex aspect-square items-center justify-center rounded-2xl ${bg[k]} transition hover:scale-[1.03]`}><I className="text-primary-dark" size={30} /></div>)}
+        {tiles.map((I, k) => <div key={k} className={`flex aspect-square items-center justify-center rounded-2xl ${bg[k]} transition hover:scale-[1.03] shadow-sm`}><I className="text-primary-dark" size={30} /></div>)}
       </div>
       <Reveal>
         <p className="text-sm text-primary">Discover more</p>

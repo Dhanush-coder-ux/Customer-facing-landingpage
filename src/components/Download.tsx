@@ -10,7 +10,7 @@ export default function Download() {
         <PlayButton className="mt-8 w-full sm:w-auto" />
         <p className="mt-4 text-sm text-ink/60">Fast • Simple • Secure</p>
       </Reveal>
-      <Reveal><PhoneMockup className="scale-95" /></Reveal>
+      <Reveal><PhoneMockup className="scale-95" label="Live App in Hand" tag="Shopper v1.0" /></Reveal>
     </section>
   );
 }

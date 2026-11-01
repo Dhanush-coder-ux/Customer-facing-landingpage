@@ -1,32 +1,70 @@
-import { Search, Home, Heart, ShoppingCart, User, Shirt, Headphones, Watch, Footprints } from "lucide-react";
-const items = [
-  { n: "Wireless Headphones", p: "$89", i: Headphones, c: "bg-blue-100" },
-  { n: "Classic Watch", p: "$129", i: Watch, c: "bg-outline" },
-  { n: "Everyday Sneakers", p: "$64", i: Footprints, c: "bg-sky-100" },
-  { n: "Linen Shirt", p: "$38", i: Shirt, c: "bg-indigo-100" },
-];
-export default function PhoneMockup({ className = "" }: { className?: string }) {
+import { Image as ImageIcon, Sparkles } from "lucide-react";
+
+interface PhoneMockupProps {
+  className?: string;
+  label?: string;
+  tag?: string;
+  imageSrc?: string;
+  aspectRatio?: string;
+}
+
+export default function PhoneMockup({
+  className = "",
+  label = "App Screen",
+  tag = "OG App Screenshot",
+  imageSrc,
+}: PhoneMockupProps) {
   return (
-    <div className={`relative mx-auto w-[260px] rounded-[2.5rem] border-[8px] border-ink bg-white shadow-2xl sm:w-[290px] ${className}`}>
-      <div className="mx-auto mt-2 h-4 w-20 rounded-full bg-ink" />
-      <div className="space-y-3 px-4 pb-3 pt-3">
-        <div className="text-xs text-ink/60">Good morning</div>
-        <div className="flex items-center gap-2 rounded-xl border border-outline bg-hero px-3 py-2 text-xs text-ink/40"><Search size={14} /> Search products</div>
-        <div className="flex gap-2 overflow-hidden text-[11px]">
-          {["All", "Fashion", "Audio", "Home"].map((c, k) => <span key={c} className={`rounded-full px-3 py-1 ${k === 0 ? "bg-primary text-white" : "bg-highlight text-primary-dark"}`}>{c}</span>)}
-        </div>
-        <div className="grid grid-cols-2 gap-2">
-          {items.map(({ n, p, i: Icon, c }) => (
-            <div key={n} className="rounded-xl border border-outline/50 p-2">
-              <div className={`flex h-20 items-center justify-center rounded-lg ${c}`}><Icon className="text-primary-dark" size={28} /></div>
-              <div className="mt-2 truncate text-[11px] font-medium">{n}</div><div className="text-[11px] text-primary">{p}</div>
+    <div
+      className={`relative mx-auto w-[260px] rounded-[2.8rem] border-[8px] border-stone-900 bg-milk shadow-2xl ring-1 ring-black/5 sm:w-[290px] ${className}`}
+    >
+      {/* Top Speaker / Dynamic Island */}
+      <div className="mx-auto mt-2 h-4 w-24 rounded-full bg-stone-900" />
+
+      {/* Screen area */}
+      <div className="p-3">
+        <div className="relative flex aspect-[9/18] w-full flex-col items-center justify-center overflow-hidden rounded-[2rem] border-2 border-dashed border-orange-300/80 bg-gradient-to-b from-milk via-orange-50/50 to-milk-warm/60 p-4 text-center transition-all">
+          {imageSrc ? (
+            <img
+              src={imageSrc}
+              alt={label}
+              className="h-full w-full rounded-[1.8rem] object-cover"
+            />
+          ) : (
+            <div className="flex flex-col items-center justify-center space-y-3">
+              <div className="relative">
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-orange-100 text-primary shadow-inner">
+                  <ImageIcon size={30} className="stroke-[1.75]" />
+                </div>
+                <span className="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-white shadow">
+                  <Sparkles size={12} />
+                </span>
+              </div>
+
+              <div className="space-y-1 px-2">
+                <span className="inline-block rounded-full bg-orange-100/90 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-primary-dark">
+                  {tag}
+                </span>
+                <p className="text-xs font-semibold text-ink">{label}</p>
+                <p className="text-[11px] leading-tight text-ink/50">
+                  Drop your real app screenshot here
+                </p>
+              </div>
+
+              <div className="w-full max-w-[170px] rounded-xl border border-orange-200/60 bg-white/80 p-2.5 shadow-sm backdrop-blur">
+                <div className="flex items-center justify-center gap-1.5 text-[10px] font-medium text-orange-700">
+                  <span>PNG / JPG</span>
+                  <span>•</span>
+                  <span>1080 × 2400</span>
+                </div>
+              </div>
             </div>
-          ))}
-        </div>
-        <div className="flex justify-between border-t border-outline/50 pt-3 text-ink/40">
-          <Home size={18} className="text-primary" /><Search size={18} /><Heart size={18} /><ShoppingCart size={18} /><User size={18} />
+          )}
         </div>
       </div>
+
+      {/* Bottom home indicator line */}
+      <div className="mx-auto mb-2 h-1 w-24 rounded-full bg-stone-400/50" />
     </div>
   );
 }
