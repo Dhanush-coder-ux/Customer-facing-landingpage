@@ -2,12 +2,12 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { IOS_AVAILABLE } from "../constants";
 const Q = [
-  ["What is Shopper?", "Shopper is a customer-facing mobile shopping application that lets you discover products and shop from digital stores."],
-  ["Where can I download Shopper?", "Shopper is available through the Google Play Store."],
-  ["Is Shopper free to download?", "Yes, the Shopper app can be downloaded for free. Product prices and other charges may vary depending on the store and product."],
-  ["Can I browse different categories?", "Yes. Shopper lets you explore products through organized categories and collections."],
-  ["Can I search for products?", "Yes. Shopper includes a search experience to help you quickly find products."],
-  ["Is Shopper available on iOS?", IOS_AVAILABLE ? "Yes, Shopper is available on iOS." : "iOS availability is coming soon."],
+  ["What is ShopQ?", "ShopQ is a customer-facing mobile shopping application that lets you discover products and shop from digital stores."],
+  ["Where can I download ShopQ?", "ShopQ is available through the Google Play Store."],
+  ["Is ShopQ free to download?", "Yes, the ShopQ app can be downloaded for free. Product prices and other charges may vary depending on the store and product."],
+  ["Can I browse different categories?", "Yes. ShopQ lets you explore products through organized categories and collections."],
+  ["Can I search for products?", "Yes. ShopQ includes a search experience to help you quickly find products."],
+  ["Is ShopQ available on iOS?", IOS_AVAILABLE ? "Yes, ShopQ is available on iOS." : "iOS availability is coming soon."],
 ];
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);

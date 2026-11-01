@@ -1,6 +1,6 @@
 import Reveal from "./Reveal";
 const S = [
-  { t: "Download Shopper", d: "Get the Shopper app from Google Play." },
+  { t: "Download ShopQ", d: "Get the ShopQ app from Google Play." },
   { t: "Discover", d: "Browse stores, categories, and products." },
   { t: "Shop", d: "Choose your products and enjoy a simple shopping experience." },
 ];

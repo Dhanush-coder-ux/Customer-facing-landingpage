@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Menu, X, ShoppingBag } from "lucide-react";
-import { NAV, PLAY_STORE_URL } from "../constants";
+import { Menu, X } from "lucide-react";
+import { NAV, PLAY_STORE_URL, APP_LOGO } from "../constants";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -12,8 +12,9 @@ export default function Navbar() {
   return (
     <header className={`sticky top-0 z-50 border-b transition ${scrolled ? "border-outline bg-white/80 backdrop-blur" : "border-transparent bg-white"}`}>
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5" aria-label="Main">
-        <a href="#home" className="flex items-center gap-2 font-semibold">
-          <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-primary text-white"><ShoppingBag size={17} /></span>Shopper
+        <a href="#home" className="flex items-center gap-2.5 font-bold text-lg text-ink">
+          <img src={APP_LOGO} alt="ShopQ Logo" className="h-9 w-9 rounded-xl object-contain shadow-sm" />
+          <span>ShopQ</span>
         </a>
         <ul className="hidden gap-8 text-sm text-ink/70 md:flex">
           {NAV.map((n) => <li key={n.href}><a className="transition hover:text-primary" href={n.href}>{n.label}</a></li>)}

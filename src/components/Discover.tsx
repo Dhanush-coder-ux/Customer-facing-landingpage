@@ -15,7 +15,7 @@ export default function Discover() {
         <ul className="mt-6 space-y-3 text-sm">
           {["Easy product discovery", "Organized categories", "Beautiful product previews", "Fast browsing experience"].map((b) => <li key={b} className="flex gap-2"><Check size={18} className="text-primary" />{b}</li>)}
         </ul>
-        <a href="#features" className="mt-8 inline-block rounded-full bg-primary px-6 py-3 text-sm font-medium text-white transition hover:scale-105">Explore Shopper</a>
+        <a href="#features" className="mt-8 inline-block rounded-full bg-primary px-6 py-3 text-sm font-medium text-white transition hover:scale-105">Explore ShopQ</a>
       </Reveal>
     </section>
   );

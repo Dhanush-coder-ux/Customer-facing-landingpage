@@ -1,4 +1,5 @@
 import { Image as ImageIcon, Sparkles } from "lucide-react";
+import { APP_LOGO } from "../constants";
 
 interface PhoneMockupProps {
   className?: string;
@@ -33,8 +34,8 @@ export default function PhoneMockup({
           ) : (
             <div className="flex flex-col items-center justify-center space-y-3">
               <div className="relative">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-orange-100 text-primary shadow-inner">
-                  <ImageIcon size={30} className="stroke-[1.75]" />
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white p-2 shadow-md ring-1 ring-orange-200/60">
+                  <img src={APP_LOGO} alt="ShopQ App" className="h-full w-full object-contain" />
                 </div>
                 <span className="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-white shadow">
                   <Sparkles size={12} />

@@ -1,7 +1,7 @@
 import Reveal from "./Reveal";
 // Edit these entries freely
 const T = [
-  { n: "Alex", q: "Shopper makes it really easy to discover products without jumping between different websites." },
+  { n: "Alex", q: "ShopQ makes it really easy to discover products without jumping between different websites." },
   { n: "Priya", q: "I love how simple the app feels. Everything is easy to find." },
   { n: "Rahul", q: "A clean shopping experience that I can use anywhere." },
 ];
