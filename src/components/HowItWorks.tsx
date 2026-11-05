@@ -1,21 +1,53 @@
 import Reveal from "./Reveal";
-const S = [
-  { t: "Download ShopQ", d: "Get the ShopQ app from Google Play." },
-  { t: "Discover", d: "Browse stores, categories, and products." },
-  { t: "Shop", d: "Choose your products and enjoy a simple shopping experience." },
+
+const STEPS = [
+  {
+    step: "01",
+    t: "Download ShopIQ",
+    d: "Install the ShopIQ app from the Google Play Store on your Android device in seconds.",
+  },
+  {
+    step: "02",
+    t: "Explore Digital Stores",
+    d: "Browse curated store catalogs, compare products, and discover special collection drops.",
+  },
+  {
+    step: "03",
+    t: "Shop Seamlessly",
+    d: "Add products to your cart and complete checkout with clear order tracking.",
+  },
 ];
+
 export default function HowItWorks() {
   return (
-    <section id="how" className="mx-auto max-w-6xl px-5 py-20">
-      <Reveal><h2 className="text-3xl font-semibold tracking-tight">Shopping made simple</h2></Reveal>
-      <ol className="relative mt-10 space-y-8 border-l border-highlight pl-8 md:flex md:gap-8 md:space-y-0 md:border-l-0 md:pl-0">
-        {S.map((s, k) => (
-          <li key={s.t} className="relative md:flex-1 md:rounded-2xl md:border md:border-outline md:p-6">
-            <span className="absolute -left-[3.2rem] flex h-9 w-9 items-center justify-center rounded-full bg-primary text-sm text-white md:static md:mb-4">{k + 1}</span>
-            <h3 className="font-semibold">{s.t}</h3><p className="mt-1 text-sm text-ink/60">{s.d}</p>
-          </li>
+    <section id="how" className="mx-auto max-w-6xl px-5 py-16 sm:py-20 lg:py-24">
+      <Reveal>
+        <div className="text-center max-w-2xl mx-auto">
+          <span className="rounded-full bg-highlight px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-primary-dark">
+            How It Works
+          </span>
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+            Shopping made simple
+          </h2>
+          <p className="mt-3 text-sm sm:text-base leading-relaxed text-stone-600">
+            Get up and running with ShopIQ in three straightforward steps.
+          </p>
+        </div>
+      </Reveal>
+
+      <div className="mt-12 sm:mt-16 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+        {STEPS.map((s, idx) => (
+          <Reveal key={s.t}>
+            <div className="relative h-full rounded-2xl border border-outline bg-white p-7 shadow-sm transition-all duration-200 hover:border-orange-200 hover:shadow-md">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-sm font-bold text-white shadow-sm">
+                {idx + 1}
+              </span>
+              <h3 className="mt-5 text-lg font-bold text-ink">{s.t}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-stone-600">{s.d}</p>
+            </div>
+          </Reveal>
         ))}
-      </ol>
+      </div>
     </section>
   );
 }

@@ -1,4 +1,25 @@
-@tailwind base; @tailwind components; @tailwind utilities;
-html { scroll-behavior: smooth; }
-body { @apply bg-[#FDFBF7] font-sans text-ink antialiased selection:bg-orange-200 selection:text-orange-950; }
-@media (max-width: 767px), (prefers-reduced-motion: reduce) { .animate-float { animation: none; } }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  @apply bg-[#FDFBF7] font-sans text-ink antialiased selection:bg-orange-200 selection:text-orange-950;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid #F97316;
+  outline-offset: 2px;
+}
+
+@media (max-width: 767px), (prefers-reduced-motion: reduce) {
+  .animate-float {
+    animation: none;
+  }
+}

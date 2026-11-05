@@ -1,71 +1,78 @@
-import { Image as ImageIcon, Sparkles } from "lucide-react";
 import { APP_LOGO } from "../constants";
+
+interface ImageSource {
+  webp?: string;
+  png: string;
+  width?: number;
+  height?: number;
+}
 
 interface PhoneMockupProps {
   className?: string;
   label?: string;
-  tag?: string;
-  imageSrc?: string;
-  aspectRatio?: string;
+  image?: ImageSource | string;
+  priority?: boolean;
 }
 
 export default function PhoneMockup({
   className = "",
-  label = "App Screen",
-  tag = "OG App Screenshot",
-  imageSrc,
+  label = "ShopIQ App Screen",
+  image,
+  priority = false,
 }: PhoneMockupProps) {
+  const webpSrc = typeof image === "object" ? image.webp : undefined;
+  const pngSrc = typeof image === "object" ? image.png : image;
+  const width = typeof image === "object" && image.width ? image.width : 887;
+  const height = typeof image === "object" && image.height ? image.height : 1774;
+
   return (
     <div
-      className={`relative mx-auto w-[260px] rounded-[2.8rem] border-[8px] border-stone-900 bg-milk shadow-2xl ring-1 ring-black/5 sm:w-[290px] ${className}`}
+      className={`relative mx-auto w-full max-w-[250px] sm:max-w-[280px] rounded-[2.6rem] border-[7px] sm:border-[8px] border-stone-900 bg-stone-900 shadow-2xl ring-1 ring-black/10 transition-transform duration-300 ${className}`}
     >
-      {/* Top Speaker / Dynamic Island */}
-      <div className="mx-auto mt-2 h-4 w-24 rounded-full bg-stone-900" />
+      {/* Top Dynamic Island / Speaker Pill */}
+      <div
+        className="absolute left-1/2 top-2 z-20 h-3.5 w-20 sm:h-4 sm:w-24 -translate-x-1/2 rounded-full bg-stone-900"
+        aria-hidden="true"
+      />
 
-      {/* Screen area */}
-      <div className="p-3">
-        <div className="relative flex aspect-[9/18] w-full flex-col items-center justify-center overflow-hidden rounded-[2rem] border-2 border-dashed border-orange-300/80 bg-gradient-to-b from-milk via-orange-50/50 to-milk-warm/60 p-4 text-center transition-all">
-          {imageSrc ? (
+      {/* Screen container with exact 1:2 aspect ratio matching the screenshots */}
+      <div className="relative overflow-hidden rounded-[2rem] sm:rounded-[2.2rem] bg-stone-900 aspect-[887/1774]">
+        {pngSrc ? (
+          <picture>
+            {webpSrc && <source srcSet={webpSrc} type="image/webp" />}
             <img
-              src={imageSrc}
+              src={pngSrc}
               alt={label}
-              className="h-full w-full rounded-[1.8rem] object-cover"
+              width={width}
+              height={height}
+              className="block h-full w-full object-cover object-top"
+              loading={priority ? "eager" : "lazy"}
+              decoding={priority ? "sync" : "async"}
+              {...({ fetchPriority: priority ? "high" : "auto" } as Record<string, string>)}
             />
-          ) : (
-            <div className="flex flex-col items-center justify-center space-y-3">
-              <div className="relative">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white p-2 shadow-md ring-1 ring-orange-200/60">
-                  <img src={APP_LOGO} alt="ShopQ App" className="h-full w-full object-contain" />
-                </div>
-                <span className="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-white shadow">
-                  <Sparkles size={12} />
-                </span>
-              </div>
-
-              <div className="space-y-1 px-2">
-                <span className="inline-block rounded-full bg-orange-100/90 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-primary-dark">
-                  {tag}
-                </span>
-                <p className="text-xs font-semibold text-ink">{label}</p>
-                <p className="text-[11px] leading-tight text-ink/50">
-                  Drop your real app screenshot here
-                </p>
-              </div>
-
-              <div className="w-full max-w-[170px] rounded-xl border border-orange-200/60 bg-white/80 p-2.5 shadow-sm backdrop-blur">
-                <div className="flex items-center justify-center gap-1.5 text-[10px] font-medium text-orange-700">
-                  <span>PNG / JPG</span>
-                  <span>•</span>
-                  <span>1080 × 2400</span>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
+          </picture>
+        ) : (
+          <div className="flex h-full w-full items-center justify-center bg-stone-900 p-4 text-center">
+            <picture>
+              <source srcSet={APP_LOGO.webp} type="image/webp" />
+              <img
+                src={APP_LOGO.png}
+                alt="ShopIQ App Icon"
+                width={56}
+                height={56}
+                className="h-14 w-14 object-contain"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        )}
       </div>
 
       {/* Bottom home indicator line */}
-      <div className="mx-auto mb-2 h-1 w-24 rounded-full bg-stone-400/50" />
+      <div
+        className="mx-auto my-1.5 sm:my-2 h-1 w-20 sm:w-24 rounded-full bg-stone-500/40"
+        aria-hidden="true"
+      />
     </div>
   );
 }
