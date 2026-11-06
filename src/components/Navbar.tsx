@@ -60,19 +60,19 @@ export default function Navbar() {
           <a
             href="#home"
             className="flex items-center gap-2.5 font-bold text-lg text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg px-1 py-0.5"
-            aria-label="ShopIQ Home"
+            aria-label="ShopiQ Home"
           >
             <picture>
               <source srcSet={APP_LOGO.webp} type="image/webp" />
               <img
                 src={APP_LOGO.png}
-                alt="ShopIQ Logo"
+                alt="ShopiQ Logo"
                 width={36}
                 height={36}
                 className="h-9 w-9 rounded-xl object-contain shadow-sm"
               />
             </picture>
-            <span className="tracking-tight text-xl font-bold">ShopIQ</span>
+            <span className="tracking-tight text-xl font-bold">ShopiQ</span>
           </a>
 
           {/* Desktop Navigation Links */}
@@ -144,7 +144,7 @@ export default function Navbar() {
                 Download App on Google Play
               </a>
               <p className="mt-3 text-center text-xs text-stone-500">
-                ShopIQ Mobile • Free Download
+                ShopiQ Mobile • Free Download
               </p>
             </div>
           </div>

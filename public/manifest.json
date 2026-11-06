@@ -1,7 +1,7 @@
 {
-  "name": "ShopIQ Mobile Shopping",
-  "short_name": "ShopIQ",
-  "description": "Discover products, explore digital stores, and enjoy a simple mobile shopping experience with ShopIQ.",
+  "name": "ShopiQ Mobile Shopping",
+  "short_name": "ShopiQ",
+  "description": "Discover hidden stores, check availability, and enjoy a simple mobile shopping experience with ShopiQ.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FDFBF7",

@@ -4,9 +4,9 @@ import Reveal from "./Reveal";
 const BENEFITS = [
   {
     icon: Store,
-    title: "Verified Digital Stores",
+    title: "Verified Local Stores",
     description:
-      "Explore independent brands and curated digital shops in one unified app. Discover unique product collections directly from verified merchants.",
+      "Explore independent neighborhood shops and curated boutiques in one unified app. Discover unique product collections directly from verified local merchants.",
   },
   {
     icon: Zap,
@@ -46,13 +46,13 @@ export default function Benefits() {
       <Reveal>
         <div className="text-center max-w-2xl mx-auto">
           <span className="rounded-full bg-highlight px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-primary-dark">
-            Why Choose ShopIQ
+            Why Choose ShopiQ
           </span>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
             Built for everyday mobile shopping
           </h2>
           <p className="mt-3 text-sm sm:text-base leading-relaxed text-stone-600">
-            ShopIQ was created to make finding and purchasing products from digital storefronts clean, transparent, and effortlessly fast.
+            ShopiQ was created to make discovering hidden stores, checking live availability, and shopping local clean, transparent, and effortlessly fast.
           </p>
         </div>
       </Reveal>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Heart, ShoppingCart, Sparkles, TrendingUp, Smartphone, Store } from "lucide-react";
+import { Compass, ShoppingBag, CheckCircle2, Search, Smartphone, Store, Check } from "lucide-react";
 import PlayButton from "./PlayButton";
 import PhoneMockup from "./PhoneMockup";
 import { APP_LOGO, SCREEN_HOME, SCREEN_STORE } from "../constants";
@@ -26,29 +26,46 @@ export default function Hero() {
               <source srcSet={APP_LOGO.webp} type="image/webp" />
               <img
                 src={APP_LOGO.png}
-                alt="ShopIQ App"
+                alt="ShopiQ App"
                 width={20}
                 height={20}
                 className="h-5 w-5 rounded-md object-contain"
               />
             </picture>
             <span className="text-primary-dark tracking-wide uppercase text-[11px]">
-              Your Digital Shopping Companion
+              Your Local Shopping Companion
             </span>
           </div>
 
           <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-ink sm:text-5xl lg:text-6xl">
             Discover. Shop. <br className="hidden sm:inline" />
-            <span className="text-primary">Enjoy.</span>
+            <span className="text-primary">Nearby.</span>
           </h1>
 
           <p className="mt-4 text-lg font-medium text-stone-700 sm:text-xl">
-            Everything you love to shop, right at your fingertips.
+            Everything you love to shop, right around your corner.
           </p>
 
           <p className="mt-3 max-w-lg mx-auto lg:mx-0 text-sm sm:text-base leading-relaxed text-stone-600">
-            ShopIQ connects you with curated digital stores and trending products in one unified, mobile-first shopping experience built for speed and simplicity.
+            ShopiQ makes it easy to discover hidden stores near you, shop online from your favourite local stores, check availability before you visit, and find what you need nearby.
           </p>
+
+          {/* 4 Core Pillars */}
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-2.5 max-w-lg mx-auto lg:mx-0 text-left">
+            {[
+              "Discover hidden stores near you",
+              "Shop online from your favourite local stores",
+              "Check availability before you visit",
+              "Find what you need nearby",
+            ].map((point) => (
+              <div key={point} className="flex items-center gap-2 rounded-xl border border-orange-100 bg-white/80 px-3 py-2 text-xs font-semibold text-stone-700 shadow-sm">
+                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-orange-100 text-primary-dark">
+                  <Check size={12} className="stroke-[2.5]" />
+                </span>
+                <span>{point}</span>
+              </div>
+            ))}
+          </div>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-3.5 sm:flex-row lg:justify-start">
             <PlayButton />
@@ -106,14 +123,14 @@ export default function Hero() {
             {mobileTab === "home" ? (
               <PhoneMockup
                 image={SCREEN_HOME}
-                label="ShopIQ Home Screen"
+                label="ShopiQ Home Screen"
                 priority={true}
                 className="w-full"
               />
             ) : (
               <PhoneMockup
                 image={SCREEN_STORE}
-                label="ShopIQ Store Home Screen"
+                label="ShopiQ Store Home Screen"
                 priority={true}
                 className="w-full"
               />
@@ -128,7 +145,7 @@ export default function Hero() {
               </span>
               <PhoneMockup
                 image={SCREEN_HOME}
-                label="ShopIQ Home Screen"
+                label="ShopiQ Home Screen"
                 priority={true}
                 className="w-[220px] sm:w-[240px] md:w-[260px]"
               />
@@ -139,7 +156,7 @@ export default function Hero() {
               </span>
               <PhoneMockup
                 image={SCREEN_STORE}
-                label="ShopIQ Store Home Screen"
+                label="ShopiQ Store Home Screen"
                 priority={true}
                 className="w-[220px] sm:w-[240px] md:w-[260px]"
               />
@@ -148,20 +165,20 @@ export default function Hero() {
 
           {/* Floating Feature Badges (Desktop only to prevent overlap) */}
           <div className={`${chip} -left-4 top-10`}>
-            <Sparkles size={14} className="text-primary" />
-            <span>Verified Digital Stores</span>
+            <Compass size={14} className="text-primary" />
+            <span>Discover Hidden Stores</span>
           </div>
           <div className={`${chip} -right-4 top-24`}>
-            <TrendingUp size={14} className="text-primary" />
-            <span>Trending Products</span>
+            <ShoppingBag size={14} className="text-primary" />
+            <span>Shop Local Stores Online</span>
           </div>
           <div className={`${chip} bottom-20 -left-6`}>
-            <ShoppingCart size={14} className="text-primary" />
-            <span>Instant Cart Access</span>
+            <CheckCircle2 size={14} className="text-primary" />
+            <span>Check Availability First</span>
           </div>
           <div className={`${chip} bottom-8 -right-4`}>
-            <Heart size={14} className="text-primary" />
-            <span>Curated Collections</span>
+            <Search size={14} className="text-primary" />
+            <span>Find What You Need Nearby</span>
           </div>
         </motion.div>
       </div>

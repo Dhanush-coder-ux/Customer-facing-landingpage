@@ -4,28 +4,28 @@ import Reveal from "./Reveal";
 
 const FAQS = [
   {
-    q: "What is ShopIQ?",
-    a: "ShopIQ is a dedicated mobile shopping application for Android that brings together curated digital storefronts and verified merchants into one intuitive mobile app. You can discover specialized collections, compare products, and order directly from stores without jumping between fragmented websites.",
+    q: "What is ShopiQ?",
+    a: "ShopiQ is your dedicated mobile shopping companion on Android. It allows you to discover hidden stores near you, shop online from your favourite local stores, check real-time product availability before you visit, and find whatever you need nearby — all in one unified, easy-to-use app.",
   },
   {
-    q: "Where can I download the ShopIQ app?",
-    a: "ShopIQ is available for free download on the Google Play Store for Android devices. Click any of the 'Download App' or 'Get it on Google Play' buttons on this page to visit our store listing.",
+    q: "How can I check product availability before I visit a store?",
+    a: "Every verified local store on ShopiQ displays live in-store stock, available variants, and real-time prices. You can verify whether an item is on the shelf before heading out, saving you time and avoiding wasted trips.",
   },
   {
-    q: "Is ShopIQ free to download and use?",
-    a: "Yes. Downloading, browsing, and searching products on ShopIQ is 100% free with no subscription fees. You only pay for the products and shipping charges determined by individual digital stores at checkout.",
+    q: "Can I shop online directly from my favourite local stores?",
+    a: "Yes! You can browse the full digital catalog of local neighborhood shops, add items to your cart, and complete orders online with transparent tracking and flexible pickup or delivery options.",
   },
   {
-    q: "How do store orders and checkouts work?",
-    a: "When you find an item you like, add it to your shopping cart and proceed to the unified checkout. Your order is processed securely and routed directly to the verified store merchant for fulfillment and delivery updates.",
+    q: "Where can I download the ShopiQ app?",
+    a: "ShopiQ is available for free download on the Google Play Store for Android devices. Click any of the 'Download App' or 'Get it on Google Play' buttons on this page to visit our store listing.",
+  },
+  {
+    q: "Is ShopiQ free to download and use?",
+    a: "Yes. Downloading, browsing, checking store availability, and finding stores on ShopiQ is 100% free with no subscription fees. You only pay for the products you purchase directly from the stores.",
   },
   {
     q: "How is my payment and personal data secured?",
-    a: "ShopIQ utilizes industry-standard encryption protocols (TLS/HTTPS) and trusted payment gateways. We never store raw payment credentials or sell your browsing history to third-party advertisers.",
-  },
-  {
-    q: "Will ShopIQ be available on iOS / iPhone?",
-    a: "ShopIQ is initially launched as a dedicated Android experience. An iOS application for iPhone is currently in active development and will be announced as soon as it is released.",
+    a: "ShopiQ utilizes industry-standard encryption protocols (TLS/HTTPS) and trusted payment gateways. We never store raw payment credentials or sell your browsing history to third-party advertisers.",
   },
 ];
 
@@ -47,7 +47,7 @@ export default function FAQ() {
             Frequently asked questions
           </h2>
           <p className="mt-3 text-sm sm:text-base leading-relaxed text-stone-600">
-            Everything you need to know about getting started with ShopIQ.
+            Everything you need to know about getting started with ShopiQ.
           </p>
         </div>
       </Reveal>

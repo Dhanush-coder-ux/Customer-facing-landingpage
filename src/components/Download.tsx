@@ -11,10 +11,10 @@ export default function Download() {
           Get Started
         </span>
         <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-          Shop smarter with ShopIQ
+          Shop smarter with ShopiQ
         </h2>
         <p className="mt-4 max-w-md text-stone-600 leading-relaxed text-sm sm:text-base">
-          Take your shopping experience wherever you go. Download ShopIQ on Android to explore verified digital stores, compare products, and enjoy safe, instant checkout directly from your mobile device.
+          Take your shopping experience wherever you go. Download ShopiQ on Android to explore verified digital stores, compare products, and enjoy safe, instant checkout directly from your mobile device.
         </p>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -37,7 +37,7 @@ export default function Download() {
       <Reveal className="flex justify-center">
         <PhoneMockup
           image={SCREEN_HOME}
-          label="ShopIQ App on Android"
+          label="ShopiQ App on Android"
           className="w-[250px] sm:w-[270px]"
         />
       </Reveal>

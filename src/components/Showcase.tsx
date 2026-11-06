@@ -14,7 +14,7 @@ export default function Showcase() {
             Everything you need. Right in your pocket.
           </h2>
           <p className="mt-3 text-sm text-stone-600 sm:text-base leading-relaxed">
-            Experience the authentic ShopIQ interface: browse trending product drops from the home feed or explore dedicated digital store hubs with zero friction.
+            Experience the authentic ShopiQ interface: discover hidden stores from the home feed, check live stock before you visit, or shop your favourite local stores with zero friction.
           </p>
         </div>
       </Reveal>
@@ -25,11 +25,11 @@ export default function Showcase() {
           <div className="flex flex-col items-center">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-orange-200 bg-white px-3.5 py-1 text-xs font-semibold text-stone-800 shadow-sm">
               <span className="h-2 w-2 rounded-full bg-primary" />
-              <span>ShopIQ Home Screen</span>
+              <span>ShopiQ Home Screen</span>
             </div>
             <PhoneMockup
               image={SCREEN_HOME}
-              label="ShopIQ Home Screen - Browse Products and Collections"
+              label="ShopiQ Home Screen - Browse Products and Collections"
               className="w-[250px] sm:w-[270px] shadow-2xl transition-transform duration-300 hover:-translate-y-2"
             />
             <p className="mt-4 text-center text-xs font-medium text-stone-500">
@@ -43,15 +43,15 @@ export default function Showcase() {
           <div className="flex flex-col items-center">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-orange-200 bg-white px-3.5 py-1 text-xs font-semibold text-stone-800 shadow-sm">
               <span className="h-2 w-2 rounded-full bg-orange-600" />
-              <span>Digital Store Home Screen</span>
+              <span>Local Store Home Screen</span>
             </div>
             <PhoneMockup
               image={SCREEN_STORE}
-              label="ShopIQ Store Screen - Explore Specialized Digital Stores"
+              label="ShopiQ Store Screen - Explore Local Store Catalogs & Inventory"
               className="w-[250px] sm:w-[270px] shadow-2xl transition-transform duration-300 hover:-translate-y-2"
             />
             <p className="mt-4 text-center text-xs font-medium text-stone-500">
-              Full store catalogs, brand identity, and direct inventory
+              Full store catalogs, local merchant identity, and live inventory
             </p>
           </div>
         </Reveal>

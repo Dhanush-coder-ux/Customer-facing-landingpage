@@ -26,19 +26,19 @@ export default function Footer() {
             <a
               href="#home"
               className="inline-flex items-center gap-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg"
-              aria-label="ShopIQ Home"
+              aria-label="ShopiQ Home"
             >
               <picture>
                 <source srcSet={APP_LOGO.webp} type="image/webp" />
                 <img
                   src={APP_LOGO.png}
-                  alt="ShopIQ Logo"
+                  alt="ShopiQ Logo"
                   width={36}
                   height={36}
                   className="h-9 w-9 rounded-xl object-contain shadow-sm"
                 />
               </picture>
-              <span className="font-bold text-xl tracking-tight text-ink">ShopIQ</span>
+              <span className="font-bold text-xl tracking-tight text-ink">ShopiQ</span>
             </a>
 
             <p className="max-w-sm text-sm leading-relaxed text-stone-600">
@@ -112,7 +112,7 @@ export default function Footer() {
                   className="flex items-center gap-2 transition hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded text-left"
                 >
                   <FileText size={16} className="text-primary shrink-0" />
-                  <span>ShopIQ Terms of Use</span>
+                  <span>ShopiQ Terms of Use</span>
                 </button>
               </li>
               <li>
@@ -122,7 +122,7 @@ export default function Footer() {
                   className="flex items-center gap-2 transition hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded text-left"
                 >
                   <Shield size={16} className="text-primary shrink-0" />
-                  <span>ShopIQ Privacy Policy</span>
+                  <span>ShopiQ Privacy Policy</span>
                 </button>
               </li>
               <li>
@@ -155,7 +155,7 @@ export default function Footer() {
         {/* Copyright notice */}
         <div className="border-t border-outline px-5 py-5 text-center text-xs text-stone-500">
           <p>
-            © {new Date().getFullYear()} {COMPANY_NAME}. All rights reserved. ShopIQ is an online technology marketplace connecting consumers with independent digital merchants.
+            © {new Date().getFullYear()} {COMPANY_NAME}. All rights reserved. ShopiQ is an online technology marketplace connecting consumers with independent digital merchants.
           </p>
         </div>
       </footer>

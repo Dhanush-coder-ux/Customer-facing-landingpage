@@ -6,7 +6,7 @@ export default function PlayButton({ className = "" }: { className?: string }) {
       href={PLAY_STORE_URL}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Download ShopIQ on Google Play Store (opens in a new tab)"
+      aria-label="Download ShopiQ on Google Play Store (opens in a new tab)"
       className={`inline-flex items-center justify-center gap-3 rounded-xl bg-ink px-5 py-3 text-white shadow-md transition-all duration-200 hover:scale-[1.02] hover:bg-stone-800 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${className}`}
     >
       <svg

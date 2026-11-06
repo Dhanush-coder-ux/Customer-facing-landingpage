@@ -3,18 +3,18 @@ import Reveal from "./Reveal";
 const STEPS = [
   {
     step: "01",
-    t: "Download ShopIQ",
-    d: "Install the ShopIQ app from the Google Play Store on your Android device in seconds.",
+    t: "Download ShopiQ",
+    d: "Install the ShopiQ app from the Google Play Store on your Android device in seconds.",
   },
   {
     step: "02",
-    t: "Explore Digital Stores",
-    d: "Browse curated store catalogs, compare products, and discover special collection drops.",
+    t: "Discover Stores & Check Stock",
+    d: "Uncover hidden stores near you, find what you need nearby, and check real-time stock before visiting.",
   },
   {
     step: "03",
-    t: "Shop Seamlessly",
-    d: "Add products to your cart and complete checkout with clear order tracking.",
+    t: "Shop Online or In-Store",
+    d: "Order online from your favourite local stores with seamless checkout, or visit with confidence.",
   },
 ];
 
@@ -30,7 +30,7 @@ export default function HowItWorks() {
             Shopping made simple
           </h2>
           <p className="mt-3 text-sm sm:text-base leading-relaxed text-stone-600">
-            Get up and running with ShopIQ in three straightforward steps.
+            Get up and running with ShopiQ in three straightforward steps.
           </p>
         </div>
       </Reveal>

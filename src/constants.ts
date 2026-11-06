@@ -20,7 +20,7 @@ export const SCREEN_STORE = {
   height: 1774,
 };
 
-// Verified Google Play Store URL for ShopIQ
+// Verified Google Play Store URL for ShopiQ
 export const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.shopper.app";
 
 // Company & Platform Disclosures

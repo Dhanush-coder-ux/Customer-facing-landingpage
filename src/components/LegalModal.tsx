@@ -62,8 +62,8 @@ export default function LegalModal({ type, onClose }: LegalModalProps) {
             </span>
             <div>
               <h2 id="legal-modal-title" className="text-xl sm:text-2xl font-bold text-ink">
-                {activeTab === "terms" && "ShopIQ Terms of Use"}
-                {activeTab === "privacy" && "ShopIQ Privacy Policy"}
+                {activeTab === "terms" && "ShopiQ Terms of Use"}
+                {activeTab === "privacy" && "ShopiQ Privacy Policy"}
                 {activeTab === "retailer-terms" && "InventQ Retailer Terms"}
                 {activeTab === "retailer-privacy" && "InventQ Retailer Privacy"}
               </h2>
@@ -139,7 +139,7 @@ export default function LegalModal({ type, onClose }: LegalModalProps) {
 
         {/* Document Body */}
         <div className="flex-1 overflow-y-auto px-6 sm:px-8 py-6 text-sm leading-relaxed text-stone-700 space-y-6">
-          {/* TAB 1: ShopIQ Terms of Use */}
+          {/* TAB 1: ShopiQ Terms of Use */}
           {activeTab === "terms" && (
             <article className="space-y-6">
               <div className="rounded-2xl border border-orange-200 bg-orange-50/60 p-4 text-xs text-stone-700">
@@ -153,16 +153,16 @@ export default function LegalModal({ type, onClose }: LegalModalProps) {
               <section className="space-y-2">
                 <h3 className="text-lg font-bold text-ink">1. About these terms</h3>
                 <p>
-                  These Terms of Use govern your use of the <strong>ShopIQ</strong> mobile application and website,
+                  These Terms of Use govern your use of the <strong>ShopiQ</strong> mobile application and website,
                   operated by <strong>{COMPANY_NAME}</strong> (registered office at {REGISTERED_ADDRESS}).
                 </p>
-                <p>By creating an account or placing an order through ShopIQ, you agree to these terms.</p>
+                <p>By creating an account or placing an order through ShopiQ, you agree to these terms.</p>
               </section>
 
               <section className="space-y-2">
                 <h3 className="text-lg font-bold text-ink">2. What we are — and what we are not</h3>
                 <p>
-                  ShopIQ is a <strong>technology platform</strong> that allows local and digital retailers to display
+                  ShopiQ is a <strong>technology platform</strong> that allows local and digital retailers to display
                   their products and receive orders from customers.
                 </p>
                 <div className="rounded-xl bg-stone-50 border border-outline p-4 space-y-1.5">
@@ -236,7 +236,7 @@ export default function LegalModal({ type, onClose }: LegalModalProps) {
                   the merchant&rsquo;s account, or another payment method the retailer offers.
                 </p>
                 <p className="font-semibold text-stone-900">
-                  ShopIQ does not collect, hold, or process payments for your store orders, and does not act as a payment intermediary.
+                  ShopiQ does not collect, hold, or process payments for your store orders, and does not act as a payment intermediary.
                 </p>
               </section>
 
@@ -346,20 +346,20 @@ export default function LegalModal({ type, onClose }: LegalModalProps) {
             </article>
           )}
 
-          {/* TAB 2: ShopIQ Privacy Policy */}
+          {/* TAB 2: ShopiQ Privacy Policy */}
           {activeTab === "privacy" && (
             <article className="space-y-6">
               <div className="rounded-2xl border border-orange-200 bg-orange-50/60 p-4 text-xs text-stone-700">
                 <p className="font-semibold text-primary-dark">Digital Personal Data Protection (DPDP) Act, 2023 & SPDI Rules</p>
                 <p className="mt-1">
-                  Explains what personal data ShopIQ collects, our legal bases, data sharing with independent merchants, security, and your statutory rights.
+                  Explains what personal data ShopiQ collects, our legal bases, data sharing with independent merchants, security, and your statutory rights.
                 </p>
               </div>
 
               <section className="space-y-2">
                 <h3 className="text-lg font-bold text-ink">1. Introduction</h3>
                 <p>
-                  This Privacy Policy explains what personal information <strong>ShopIQ</strong> collects when you use
+                  This Privacy Policy explains what personal information <strong>ShopiQ</strong> collects when you use
                   our app and website, how we use it, and your statutory rights. The platform is operated by{" "}
                   <strong>{COMPANY_NAME}</strong>.
                 </p>
@@ -412,7 +412,7 @@ export default function LegalModal({ type, onClose }: LegalModalProps) {
                   </table>
                 </div>
                 <p className="text-xs text-stone-500">
-                  <strong>Payment Information:</strong> Payments are made directly to the retailer. ShopIQ does not collect or store your payment card numbers, UPI PINs, or bank account credentials.
+                  <strong>Payment Information:</strong> Payments are made directly to the retailer. ShopiQ does not collect or store your payment card numbers, UPI PINs, or bank account credentials.
                 </p>
               </section>
 

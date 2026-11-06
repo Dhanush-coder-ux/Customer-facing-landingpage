@@ -3,23 +3,23 @@ import Reveal from "./Reveal";
 const PILLARS = [
   {
     num: "01",
-    title: "Curated Storefronts",
-    desc: "Discover verified digital stores with unique, authentic items.",
+    title: "Discover Hidden Stores",
+    desc: "Uncover vetted local boutiques and neighborhood specialty shops in your area.",
   },
   {
     num: "02",
-    title: "Instant Search",
-    desc: "Lightning-fast product search with real-time mobile filtering.",
+    title: "Shop Local Online",
+    desc: "Order seamlessly online from your favourite nearby merchants with fast checkout.",
   },
   {
     num: "03",
-    title: "Mobile First",
-    desc: "Engineered specifically for handheld comfort and one-thumb usability.",
+    title: "Check Live Stock",
+    desc: "View real-time in-store availability and prices before making the trip.",
   },
   {
     num: "04",
-    title: "Secure Shopping",
-    desc: "Industry-standard data encryption and transparent order tracking.",
+    title: "Find Nearby Essentials",
+    desc: "Lightning-fast search to find exactly what you need at stores around the corner.",
   },
 ];
 
@@ -30,10 +30,10 @@ export default function Why() {
         <Reveal>
           <div className="max-w-2xl">
             <span className="rounded-full bg-white/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-orange-200">
-              The ShopIQ Advantage
+              The ShopiQ Advantage
             </span>
             <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
-              Why shoppers choose ShopIQ
+              Why shoppers choose ShopiQ
             </h2>
             <p className="mt-3 text-sm sm:text-base leading-relaxed text-orange-100">
               Engineered to bring transparency, speed, and simplicity back to online shopping.

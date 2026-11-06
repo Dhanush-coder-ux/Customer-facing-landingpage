@@ -16,7 +16,7 @@ interface PhoneMockupProps {
 
 export default function PhoneMockup({
   className = "",
-  label = "ShopIQ App Screen",
+  label = "ShopiQ App Screen",
   image,
   priority = false,
 }: PhoneMockupProps) {
@@ -57,7 +57,7 @@ export default function PhoneMockup({
               <source srcSet={APP_LOGO.webp} type="image/webp" />
               <img
                 src={APP_LOGO.png}
-                alt="ShopIQ App Icon"
+                alt="ShopiQ App Icon"
                 width={56}
                 height={56}
                 className="h-14 w-14 object-contain"

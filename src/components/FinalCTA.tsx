@@ -13,10 +13,10 @@ export default function FinalCTA() {
               Ready to shop smarter?
             </span>
             <h2 className="mt-4 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
-              Experience ShopIQ on your phone today.
+              Experience ShopiQ on your phone today.
             </h2>
             <p className="mt-4 max-w-md text-sm sm:text-base leading-relaxed text-orange-100">
-              Download ShopIQ and discover a faster, simpler way to explore digital storefronts and shop your favorite products in one place.
+              Download ShopiQ and discover a faster, simpler way to explore digital storefronts and shop your favorite products in one place.
             </p>
 
             <ul className="mt-6 space-y-2.5 text-sm text-orange-50">
@@ -41,7 +41,7 @@ export default function FinalCTA() {
                 rel="noopener noreferrer"
                 className="rounded-full bg-white px-7 py-3.5 text-center font-bold text-primary shadow-sm transition hover:bg-orange-50 hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
-                Download ShopIQ Now
+                Download ShopiQ Now
               </a>
               <a
                 href="#features"
@@ -57,7 +57,7 @@ export default function FinalCTA() {
             <div className="w-full max-w-[240px] sm:max-w-[260px]">
               <PhoneMockup
                 image={SCREEN_STORE}
-                label="ShopIQ Digital Store Page Preview"
+                label="ShopiQ Digital Store Page Preview"
                 className="shadow-2xl ring-2 ring-white/10"
               />
             </div>
