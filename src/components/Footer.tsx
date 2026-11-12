@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Mail, Phone, MapPin, Shield, FileText, ArrowUpRight, UserCheck, HelpCircle } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Mail, Phone, MapPin, Shield, FileText, ArrowUpRight, UserCheck, HelpCircle, Scale } from "lucide-react";
 import {
   NAV,
   APP_LOGO,
@@ -16,6 +16,24 @@ import LegalModal, { LegalDocType } from "./LegalModal";
 
 export default function Footer() {
   const [legalModal, setLegalModal] = useState<LegalDocType>(null);
+
+  useEffect(() => {
+    const handleHash = () => {
+      const hash = window.location.hash.replace("#", "");
+      if (
+        hash === "terms" ||
+        hash === "privacy" ||
+        hash === "retailer-terms" ||
+        hash === "retailer-privacy"
+      ) {
+        setLegalModal(hash as LegalDocType);
+      }
+    };
+
+    handleHash();
+    window.addEventListener("hashchange", handleHash);
+    return () => window.removeEventListener("hashchange", handleHash);
+  }, []);
 
   return (
     <>
@@ -101,15 +119,15 @@ export default function Footer() {
           {/* Statutory Grievance Redressal & Legal Links */}
           <div className="md:col-span-4 space-y-4">
             <p className="text-xs font-bold uppercase tracking-wider text-stone-900">
-              Grievance &amp; Compliance
+              Legal &amp; Compliance (Version 2.1)
             </p>
 
-            <ul className="space-y-2.5 text-sm font-medium text-stone-600">
+            <ul className="space-y-2 text-sm font-medium text-stone-600">
               <li>
                 <button
                   type="button"
                   onClick={() => setLegalModal("terms")}
-                  className="flex items-center gap-2 transition hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded text-left"
+                  className="flex items-center gap-2 transition hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded text-left font-semibold text-stone-800"
                 >
                   <FileText size={16} className="text-primary shrink-0" />
                   <span>ShopiQ Terms of Use</span>
@@ -119,19 +137,28 @@ export default function Footer() {
                 <button
                   type="button"
                   onClick={() => setLegalModal("privacy")}
-                  className="flex items-center gap-2 transition hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded text-left"
+                  className="flex items-center gap-2 transition hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded text-left font-semibold text-stone-800"
                 >
                   <Shield size={16} className="text-primary shrink-0" />
                   <span>ShopiQ Privacy Policy</span>
                 </button>
               </li>
-              <li>
+              <li className="pt-1 border-t border-outline/60">
                 <button
                   type="button"
                   onClick={() => setLegalModal("retailer-terms")}
                   className="flex items-center gap-2 transition hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded text-left text-xs text-stone-500"
                 >
-                  <span>InventQ Retailer Terms of Service</span>
+                  <span>InventQ Terms of Service (Retailers)</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => setLegalModal("retailer-privacy")}
+                  className="flex items-center gap-2 transition hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded text-left text-xs text-stone-500"
+                >
+                  <span>InventQ Privacy Policy (Retailers)</span>
                 </button>
               </li>
             </ul>

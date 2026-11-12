@@ -33,7 +33,7 @@ export default function Why() {
               The ShopiQ Advantage
             </span>
             <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
-              Why shoppers choose ShopiQ
+              Why choose ShopiQ
             </h2>
             <p className="mt-3 text-sm sm:text-base leading-relaxed text-orange-100">
               Engineered to bring transparency, speed, and simplicity back to online shopping.
